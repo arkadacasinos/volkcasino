@@ -1,0 +1,83 @@
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  --vk-bg-main: #0c0e14;
+  --vk-bg-surface: #141822;
+  --vk-bg-card: #1a202c;
+  --vk-border: rgba(255, 255, 255, 0.08);
+  --vk-red: #ea1935;
+  --vk-red-hover: #ff2b47;
+  --vk-green: #26a17b;
+  --vk-text: #f0f2f5;
+  --vk-muted: #9aa0b0;
+}
+
+html, body {
+  background-color: #0c0e14;
+  color: #f0f2f5;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  /* Mangled class prefixes for SEO landing */
+  .v7k-btn-red {
+    background: linear-gradient(180deg, #f02540 0%, #d6142e 100%);
+    box-shadow: 0 4px 18px rgba(234, 25, 53, 0.38);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .v7k-btn-red:hover {
+    background: linear-gradient(180deg, #ff3b53 0%, #e31833 100%);
+    box-shadow: 0 6px 24px rgba(234, 25, 53, 0.55);
+    transform: translateY(-1px);
+  }
+  .v7k-btn-red:active {
+    transform: translateY(0);
+  }
+  .v7k-card-glass {
+    background: #141824;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .v7k-chip-nav {
+    background: #191e2b;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #cfd4dc;
+    transition: all 0.15s ease;
+  }
+  .v7k-chip-nav:hover {
+    background: #22293b;
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+  }
+  .v7k-slot-card {
+    background: #131722;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+  .v7k-slot-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(234, 25, 53, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+  .v7k-seo-card {
+    background: #11141d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Custom scrollbar for horizontal ribbons */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
